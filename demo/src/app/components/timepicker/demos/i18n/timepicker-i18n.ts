@@ -31,7 +31,6 @@ export class CustomTimepickerI18n extends NgbTimepickerI18n {
 
 @Component({
 	selector: 'ngbd-timepicker-i18n',
-	standalone: true,
 	imports: [NgbTimepickerModule, NgbAlertModule, FormsModule, JsonPipe],
 	templateUrl: './timepicker-i18n.html',
 	providers: [
@@ -40,7 +39,7 @@ export class CustomTimepickerI18n extends NgbTimepickerI18n {
 			provide: NgbTimepickerI18n,
 			useClass: CustomTimepickerI18n,
 		},
-	], // define custom NgbTimepickerI18n provider
+	],
 })
 export class NgbdTimepickerI18n {
 	model = { hour: 13, minute: 30 };

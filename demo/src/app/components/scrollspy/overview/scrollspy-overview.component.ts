@@ -10,7 +10,6 @@ import { NgbdOverviewPage } from '../../../shared/overview-page/overview-page.cl
 
 @Component({
 	selector: 'ngbd-scrollspy-overview',
-	standalone: true,
 	imports: [NgbAlertModule, NgbScrollSpyModule, CodeComponent, RouterLink, NgbdApiDocsBadge, PageHeaderComponent],
 	templateUrl: './scrollspy-overview.component.html',
 	host: { '[class.overview]': 'true' },

@@ -6,10 +6,9 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
 	selector: 'ngbd-timepicker-config',
-	standalone: true,
 	imports: [NgbTimepickerModule, FormsModule, JsonPipe],
 	templateUrl: './timepicker-config.html',
-	providers: [NgbTimepickerConfig], // add NgbTimepickerConfig to the component providers
+	providers: [NgbTimepickerConfig],
 })
 export class NgbdTimepickerConfig {
 	time: NgbTimeStruct = { hour: 13, minute: 30, second: 0 };

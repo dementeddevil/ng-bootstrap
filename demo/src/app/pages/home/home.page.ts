@@ -7,7 +7,6 @@ import { NgbAlert, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
 	selector: 'ngbd-home',
-	standalone: true,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	imports: [CodeComponent, RouterLink, NgbAlertModule, NgbAlert],
 	templateUrl: './home.page.html',

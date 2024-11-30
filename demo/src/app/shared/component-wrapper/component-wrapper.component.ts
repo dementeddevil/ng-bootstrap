@@ -15,7 +15,6 @@ import { filter, map } from 'rxjs/operators';
 import { NgbdComponentPage } from './component-page.class';
 
 @Component({
-	standalone: true,
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	imports: [
 		SideNavComponent,
