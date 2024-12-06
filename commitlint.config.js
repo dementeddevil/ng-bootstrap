@@ -1,5 +1,7 @@
-const fs = require('fs');
-const angularTypes = require('@commitlint/config-angular-type-enum').value();
+import fs from 'fs';
+import at from '@commitlint/config-angular-type-enum';
+
+const angularTypes = at.value();
 
 /*
   Let's get widget names as valid list of scopes.
@@ -17,7 +19,7 @@ const scopes = [
 
 const types = ['demo', ...angularTypes];
 
-module.exports = {
+export default {
 	extends: ['@commitlint/config-angular'],
 	rules: {
 		'scope-enum': [2, 'always', scopes],
