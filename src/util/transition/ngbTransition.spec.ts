@@ -526,7 +526,6 @@ if (isBrowserVisible('ngbRunTransition')) {
 					}
 				`,
 			],
-			standalone: false,
 		})
 		class TestComponentNested {
 			@ViewChild('outer') outer: ElementRef<HTMLDivElement>;
@@ -582,7 +581,6 @@ if (isBrowserVisible('ngbRunTransition')) {
 
 @Component({
 	template: ` <div #element class="ngb-test-transition ngb-test-show" (transitionend)="onTransitionEnd()"></div>`,
-	standalone: false,
 })
 class TestComponent {
 	@ViewChild('element') element: ElementRef<HTMLDivElement>;

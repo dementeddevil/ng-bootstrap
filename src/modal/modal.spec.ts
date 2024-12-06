@@ -1376,7 +1376,6 @@ describe('ngb-modal', () => {
 	describe('Lazy loading', () => {
 		@Component({
 			template: '<router-outlet />',
-			standalone: false,
 		})
 		class AppComponent {}
 

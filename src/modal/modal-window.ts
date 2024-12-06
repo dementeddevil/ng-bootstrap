@@ -1,7 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import {
 	afterNextRender,
-	AfterRenderPhase,
 	Component,
 	ElementRef,
 	EventEmitter,
@@ -87,8 +86,8 @@ export class NgbModalWindow implements OnInit, OnDestroy {
 		return this.fullscreen === true
 			? ' modal-fullscreen'
 			: isString(this.fullscreen)
-			  ? ` modal-fullscreen-${this.fullscreen}-down`
-			  : '';
+				? ` modal-fullscreen-${this.fullscreen}-down`
+				: '';
 	}
 
 	dismiss(reason): void {
@@ -97,7 +96,12 @@ export class NgbModalWindow implements OnInit, OnDestroy {
 
 	ngOnInit() {
 		this._elWithFocus = this._document.activeElement;
-		afterNextRender(() => this._show(), { injector: this._injector, phase: AfterRenderPhase.MixedReadWrite });
+		afterNextRender(
+			{
+				mixedReadWrite: () => this._show(),
+			},
+			{ injector: this._injector },
+		);
 	}
 
 	ngOnDestroy() {

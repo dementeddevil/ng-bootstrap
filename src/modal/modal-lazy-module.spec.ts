@@ -12,7 +12,6 @@ class LazyService {
 
 @Component({
 	template: '{{ lazyService.text }}',
-	standalone: false,
 })
 class LazyModalContent {
 	constructor(public lazyService: LazyService) {}
@@ -20,7 +19,6 @@ class LazyModalContent {
 
 @Component({
 	template: 'child',
-	standalone: false,
 })
 class LazyComponent implements OnDestroy {
 	private _ref = inject(NgbModal).open(LazyModalContent);
